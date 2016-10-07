@@ -6,8 +6,15 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
+            Player player1 = new Player();
+
             Console.WriteLine("Hello Fabio!");
-            Console.ReadLine();
+            Console.WriteLine();
+
+            Console.Clear();
+            player1.Draw();
+
+            Console.ReadKey(true);
         }
     }
 }
