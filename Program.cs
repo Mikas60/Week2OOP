@@ -9,13 +9,17 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             List<Player> players = new List<Player>();
-            players.Add(new Player());
-            players.Add(new Player());
 
+            Console.WriteLine("\n\nWelcome to RetroRPG");
 
-            Console.WriteLine("Welcome to RetroRPG");
-            Console.WriteLine("Press any key to begin");
+            Console.Write("Player 1, please press a key to represent your player: ");
+            char playerSprite = Console.ReadKey().KeyChar;
+            players.Add(new Player(playerSprite));
+            Console.Write("\nPlayer 2, please press a key to represent your player: ");
+            playerSprite = Console.ReadKey().KeyChar;
+            Console.WriteLine("\nPress any key to begin");
             Console.ReadLine();
+            players.Add(new Player(playerSprite));
 
             Console.Clear();
             Draw(players);
@@ -72,7 +76,7 @@ namespace ConsoleApplication
                 Draw(players);
             
 
-                Thread.Sleep(1000/60);
+                Thread.Sleep(1000/30);
             }
         }
         public static void Draw(List<Player> players)

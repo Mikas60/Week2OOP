@@ -1,5 +1,4 @@
 using System;
-using System.Windows;
 
 
 namespace ConsoleApplication
@@ -42,6 +41,14 @@ namespace ConsoleApplication
         public Player()
         {
             sprite = '&';
+            xPosition = 3;
+            yPosition = 3;
+            speed = 1;
+        }
+
+        public Player(char playerSprite)
+        {
+            sprite = playerSprite;
             xPosition = 3;
             yPosition = 3;
             speed = 1;
