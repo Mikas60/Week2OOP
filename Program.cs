@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace ConsoleApplication
 {
@@ -7,15 +8,17 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Player player1 = new Player();
-            Player player2 = new Player();
+            List<Player> players = new List<Player>();
+            players.Add(new Player());
+            players.Add(new Player());
 
-            Console.WriteLine("Hello Fabio!");
-            Console.WriteLine();
+
+            Console.WriteLine("Welcome to RetroRPG");
+            Console.WriteLine("Press any key to begin");
+            Console.ReadLine();
 
             Console.Clear();
-            player1.Draw();
-            player2.Draw();
+            Draw(players);
 
             while(true)
             {
@@ -60,17 +63,26 @@ namespace ConsoleApplication
                         direction2 = "right";
                     }
 
-                    player1.Move(direction);
-                    player2.Move(direction2);
+                    players[0].Move(direction);
+                    players[1].Move(direction2);
 
                 }
 
                 Console.Clear();
-                player1.Draw();
-                player2.Draw();
+                Draw(players);
+            
 
                 Thread.Sleep(1000/60);
             }
+        }
+        public static void Draw(List<Player> players)
+        {
+
+           foreach(Player player in players)
+            {
+                player.Draw();
+            }
+
         }
     }
 }
