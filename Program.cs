@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace ConsoleApplication
 {
@@ -67,9 +68,9 @@ namespace ConsoleApplication
                 Console.Clear();
                 player1.Draw();
                 player2.Draw();
-            }
 
-            Console.ReadKey(true);
+                Thread.Sleep(1000/60);
+            }
         }
     }
 }
