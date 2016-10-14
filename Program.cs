@@ -10,6 +10,7 @@ namespace ConsoleApplication
         {
             List<Player> players = new List<Player>();
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("\n\nWelcome to RetroRPG");
 
             Console.Write("Player 1, please press a key to represent your player: ");
@@ -19,7 +20,7 @@ namespace ConsoleApplication
             playerSprite = Console.ReadKey().KeyChar;
             Console.WriteLine("\nPress any key to begin");
             Console.ReadLine();
-            players.Add(new Player(playerSprite));
+            players.Add(new Player(playerSprite, ConsoleColor.DarkMagenta));
 
             Console.Clear();
             Draw(players);
@@ -86,6 +87,7 @@ namespace ConsoleApplication
             {
                 player.Draw();
             }
+            Console.ForegroundColor = ConsoleColor.Gray;
 
         }
     }

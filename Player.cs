@@ -9,6 +9,7 @@ namespace ConsoleApplication
         int yPosition;
         int speed;
         char sprite;
+        ConsoleColor color = ConsoleColor.Gray;
 
         public int XPosition
         {
@@ -54,8 +55,18 @@ namespace ConsoleApplication
             speed = 1;
         }
 
+        public Player(char playerSprite, ConsoleColor color)
+        {
+            sprite = playerSprite;
+            xPosition = 3;
+            yPosition = 3;
+            speed = 1;
+            this.color = color;
+        }
+
         public void Draw()
         {
+            Console.ForegroundColor = this.color;
             Console.CursorLeft = xPosition;
             Console.CursorTop = yPosition;
             Console.Write(sprite);
