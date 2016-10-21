@@ -84,3 +84,6 @@
 -r:"C:\Users\FN229\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 "e:\University\Year 2\Term 1\C#\GitHub\Week2OOP\Program.cs"
 "e:\University\Year 2\Term 1\C#\GitHub\Week2OOP\Player.cs"
+"e:\University\Year 2\Term 1\C#\GitHub\Week2OOP\Character.cs"
+"e:\University\Year 2\Term 1\C#\GitHub\Week2OOP\Inventory.cs"
+"e:\University\Year 2\Term 1\C#\GitHub\Week2OOP\Item.cs"

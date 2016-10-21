@@ -8,8 +8,11 @@ namespace ConsoleApplication
         int xPosition;
         int yPosition;
         int speed;
+        int health;
         char sprite;
         ConsoleColor color = ConsoleColor.Gray;
+
+        public Inventory inventory = new Inventory();
 
         public int XPosition
         {
